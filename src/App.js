@@ -1,5 +1,10 @@
 import React from "react";
+import "./App.scss";
 
 export function App() {
-  <div>Pokemon</div>;
+  return (
+    <div>
+      <h1>Hello</h1>
+    </div>
+  );
 }
