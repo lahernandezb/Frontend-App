@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchPokemon } from "../utils/fetchPokemon";
+import PokemonCard from "./PokemonGrid/PokemonCard";
+import "./PokemonGrid/PokemonGrid.scss";
 
 function PokemonGrid() {
   const [pokemon, setPokemon] = useState(null);
@@ -12,9 +14,9 @@ function PokemonGrid() {
   }, []);
   return (
     <div className="pokemonGrid">
-      {/* {pokemon?.map((item) => (
-        <div>{item.name}</div>
-      ))} */}
+      {pokemon?.map(({ name, url }) => (
+        <PokemonCard key={url} pokemonDetails={{ name: name, url: url }} />
+      ))}
     </div>
   );
 }
