@@ -1,0 +1,31 @@
+.pokemonCard {
+  border: 0.25rem solid gray;
+  flex-grow: 1;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  &__actions {
+    button:first-child {
+      margin-right: 1rem;
+    }
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  @media (min-width: 500px) {
+    width: calc(50% - 6rem);
+  }
+
+  @media (min-width: 800px) {
+    width: calc(33% - 6rem);
+  }
+
+  @media (min-width: 1200px) {
+    width: calc(25% - 6rem);
+  }
+
+  &--favorite {
+    background-color: #ff6961;
+  }
+}

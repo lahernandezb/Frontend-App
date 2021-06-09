@@ -11,7 +11,6 @@ function PokemonCard({ pokemonDetails, actions, favorite }) {
       <h2 className="pokemonCard__name">
         {name} <span> {favorite && <AiFillHeart />}</span>
       </h2>
-      <p className="pokemonCard__url">{url}</p>
       <div className="pokemonCard__actions">
         <button onClick={() => favoriteAPokemon(pokemonDetails)}>
           Favorite
